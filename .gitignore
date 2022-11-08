@@ -1,0 +1,10 @@
+*.yaml
+*.bat
+*.gradle
+*build/
+*gradle/
+*gradlew
+*.gradle/
+*.idea/
+*Topics
+

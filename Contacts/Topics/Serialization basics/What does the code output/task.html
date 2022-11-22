@@ -1,0 +1,30 @@
+<h2>What does the code output</h2>
+<p>What will be the output of the following code?</p>
+
+<pre><code class="language-java">import java.io.Serializable;
+
+public class TransientFields implements Serializable {
+  
+    private static final long serialVersionUID = -8385655899811016412L;
+  
+    private final int a;
+    private final transient int b;
+  
+    public TransientFields(int a, int b) {
+        this.a = a;
+        this.b = b;
+    }
+  
+    @Override
+    public String toString() {
+        return Integer.toString(a) + " " + Integer.toString(b);
+    }
+  
+    public static void main(String[] args) {
+        TransientFields transientFields = new TransientFields(10, 20);
+    
+        // Function that serializes and deserializes object back and forth
+        transientFields = Utils.serializeDeserialize(transientFields);
+        System.out.println(transientFields);
+    }
+}</code></pre>

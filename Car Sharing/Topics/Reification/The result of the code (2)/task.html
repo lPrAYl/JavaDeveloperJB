@@ -1,0 +1,20 @@
+<h2>The result of the code</h2>
+<p>What will be the result of the following code compilation and execution:</p>
+
+<pre><code class="language-java">public class Application&lt;T extends Throwable&gt; {
+  
+  public static void main(String[] args) {
+    
+    Application&lt;RuntimeException&gt; application = new Application&lt;&gt;();
+    application.secureRun();
+
+  }
+  
+  public void secureRun() throws T {
+    try {
+      System.out.println("Hello!");
+    } catch (T e) {
+      System.err.print("Error!");
+    }
+  }
+}</code></pre>

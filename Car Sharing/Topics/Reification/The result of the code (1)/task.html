@@ -1,0 +1,15 @@
+<h2>The result of the code</h2>
+<p>What will be the result of the following code compilation and execution:</p><pre><code class="language-java">public class Application&lt;T&gt; {
+  
+  public static void main(String[] args) {
+    
+    Application&lt;Integer&gt; application = new Application&lt;&gt;();
+    System.out.println(application.check(42));
+
+  }
+  
+  public boolean check(Object object) {
+    return object instanceof T;
+  }
+
+}</code></pre>

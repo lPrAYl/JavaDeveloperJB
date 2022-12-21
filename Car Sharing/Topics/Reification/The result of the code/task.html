@@ -1,0 +1,17 @@
+<h2>The result of the code</h2>
+<p>What will be the result of the following code compilation and execution:</p><pre><code class="language-java">import java.util.ArrayList;
+
+public class Application&lt;T&gt; {
+  
+  public static void main(String[] args) {
+    
+    Application&lt;Integer&gt; application = new Application&lt;&gt;();
+    System.out.println(application.instanceOf());
+
+  }
+  
+  public T instanceOf() {
+    return new T();
+  }
+
+}</code></pre>
